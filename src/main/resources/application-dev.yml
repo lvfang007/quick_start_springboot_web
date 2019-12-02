@@ -20,19 +20,19 @@ spring:
         max-pool-prepared-statement-per-connection-size: 20
 
     ## redis缓存
-#    redis:
-#        database: 0
-#        host: localhost
-#        port: 6379
-#        password: ''
-#        pool:
-#          max-active: 50
-#          max-idle: 8
-#          max-wait: 10000
-#          min-idle: 0
-#        timeout: 20000
-#        testOnBorrow: true
-#        expiration: 600
+    redis:
+        database: 0
+        host: localhost
+        port: 6379
+        password: ''
+        pool:
+          max-active: 50
+          max-idle: 8
+          max-wait: 10000
+          min-idle: 0
+        timeout: 20000
+        testOnBorrow: true
+        expiration: 600
 
     ## freemarker
 #    freemarker:
