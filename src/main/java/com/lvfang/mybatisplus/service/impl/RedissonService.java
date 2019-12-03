@@ -1,9 +1,8 @@
 package com.lvfang.mybatisplus.service.impl;
 
 
-import org.redisson.Config;
-import org.redisson.RedissonClient;
-import org.redisson.core.*;
+import org.redisson.api.*;
+import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

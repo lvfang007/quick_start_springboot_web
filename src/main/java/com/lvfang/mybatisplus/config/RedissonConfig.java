@@ -2,9 +2,9 @@ package com.lvfang.mybatisplus.config;
 
 
 
-import org.redisson.Config;
 import org.redisson.Redisson;
-import org.redisson.RedissonClient;
+import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +31,8 @@ public class RedissonConfig {
     public RedissonClient getRedisson(){
 
         Config config = new Config();
-        config.useSingleServer().setAddress("redis://" + host + ":" + port).setPassword(password);
+        config.useSingleServer().setAddress("redis://" + host + ":" + port);
+
         //添加主从配置
 //        config.useMasterSlaveServers().setMasterAddress("").setPassword("").addSlaveAddress(new String[]{"",""});
 
