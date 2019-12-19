@@ -4,6 +4,8 @@ package com.lvfang.mybatisplus.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.lvfang.mybatisplus.entity.Phone;
 import com.lvfang.mybatisplus.service.impl.PhoneServiceImpl;
 import com.lvfang.mybatisplus.utils.CallResult;
@@ -48,10 +50,13 @@ public class PhoneController {
     @ResponseBody
     @RequestMapping(value = "/list" , method = {RequestMethod.GET,RequestMethod.POST})
     public CallResult findList(@RequestParam(value = "page",defaultValue = "1") Integer page,
-                               @RequestParam(value = "pageSize",defaultValue = "10") Integer pageSize){
-        Page<Phone> pageInfo = new Page<>(page,pageSize);
-        QueryWrapper<Phone> queryWrapper = new QueryWrapper<>();
-        IPage<Phone> result = phoneService.findList(pageInfo,queryWrapper);
+                               @RequestParam(value = "pageSize",defaultValue = "2") Integer pageSize){
+//        Page<Phone> pageInfo = new Page<>(page,pageSize);
+//        PageHelper.startPage(page, pageSize);
+//        QueryWrapper<Phone> queryWrapper = new QueryWrapper<>();
+//        IPage<Phone> result = phoneService.findList(pageInfo,queryWrapper);
+
+        PageInfo<Phone> result = phoneService.findList(page,pageSize);
         return CallResult.success(result);
     }
 }
