@@ -22,7 +22,7 @@
 		<junit.version>4.12</junit.version>
 		<druid.version>1.0.29</druid.version>
 		<redisson.version>3.7.5</redisson.version>
-		<httpclient.version>4.5.9</httpclient.version>
+		<httpclient.version>4.5.13</httpclient.version>
 		<commons-lang3.version>3.7</commons-lang3.version>
 		<mysql-connector-java.version>8.0.11</mysql-connector-java.version>
 		<mybatis-plus-boot-starter.version>3.0.2</mybatis-plus-boot-starter.version>
